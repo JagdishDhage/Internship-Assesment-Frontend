@@ -1,0 +1,288 @@
+/* Login.css - Modern professional styling for the Login component */
+
+:root {
+  --primary-color: #3a86ff;
+  --primary-hover: #2667cc;
+  --secondary-color: #8338ec;
+  --text-color: #2b2d42;
+  --text-light: #8d99ae;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-radius: 10px;
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 1rem;
+}
+
+.form {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.flex-column label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+}
+
+.inputForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #f2f5f9;
+  border-radius: 8px;
+  padding: 0 0.75rem;
+  transition: var(--transition);
+}
+
+.inputForm:focus-within {
+  box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2);
+  background-color: #fff;
+}
+
+.inputForm svg {
+  min-width: 20px;
+  height: 20px;
+  color: var(--text-light);
+  margin-right: 0.75rem;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.input::placeholder {
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.toggle-password:hover {
+  color: var(--primary-color);
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.flex-row div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flex-row div label {
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.flex-row input[type="radio"] {
+  accent-color: var(--primary-color);
+  width: 16px;
+  height: 16px;
+}
+.flex-row a{
+  text-decoration: none;
+}
+.flex-row a:hover{
+  text-decoration: none;
+}
+.span {
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.span:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.button-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 1.5rem;
+}
+
+.button-submit:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.button-submit:active {
+  transform: translateY(0);
+}
+
+.p {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.line::before {
+  left: 0;
+}
+
+.line::after {
+  right: 0;
+}
+
+.flex-row:last-child {
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.google {
+  color: #4285F4;
+}
+
+.apple {
+  color: #000000;
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .flex-row:last-child {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Animation for form loading */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+/* Input field focus animation */
+.input:focus + .inputForm::after {
+  width: 100%;
+}
+
+/* Custom styling for toast notifications */
+.Toastify__toast {
+  border-radius: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.Toastify__toast--success {
+  background-color: #06d6a0;
+}
+
+.Toastify__toast--error {
+  background-color: #ef476f;
+}

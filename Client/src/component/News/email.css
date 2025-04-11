@@ -1,0 +1,137 @@
+/* EmailVerification.css */
+.email-verification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .email-verification-content {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: 3rem;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .email-verification-content h1 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .email-verification-content h1:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4776e6, #8e54e9);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .email-verification-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .email-verification-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .verification-loading,
+  .verification-success,
+  .verification-error {
+    padding: 1.5rem 0;
+  }
+  
+  .verification-success h2 {
+    color: #22c55e;
+  }
+  
+  .verification-error h2 {
+    color: #ef4444;
+  }
+  
+  .loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgba(71, 118, 230, 0.2);
+    border-top-color: #4776e6;
+    border-radius: 50%;
+    margin: 1.5rem auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  .primary-btn {
+    background: linear-gradient(90deg, #4776e6, #8e54e9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 14px rgba(71, 118, 230, 0.25);
+  }
+  
+  .primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(71, 118, 230, 0.35);
+  }
+  
+  .primary-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .email-verification-content {
+      padding: 2rem;
+    }
+    
+    .email-verification-content h1 {
+      font-size: 1.75rem;
+    }
+    
+    .email-verification-content h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .email-verification-container {
+      padding: 1rem;
+    }
+    
+    .email-verification-content {
+      padding: 1.5rem;
+    }
+    
+    .email-verification-content h1 {
+      font-size: 1.5rem;
+    }
+  }
