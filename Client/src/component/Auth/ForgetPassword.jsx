@@ -9,7 +9,7 @@ function ForgotPassword() {
 
   const sendEmail = async () => {
     try {
-      const response = await fetch('http://localhost:3000/user/ForgotPassowrd', {
+      const response = await fetch('http://learn-notes-kappa.vercel.app/user/ForgotPassowrd', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
