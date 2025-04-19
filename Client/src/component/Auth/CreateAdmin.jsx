@@ -16,7 +16,7 @@ function CreateAdmin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/user/Admin/reg', {
+      const response = await fetch('http://learn-notes-kappa.vercel.app/user/Admin/reg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(admin)
