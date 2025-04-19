@@ -13,7 +13,7 @@ function AdminLogin() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3000/user/admin', {
+      const response = await fetch('http://learn-notes-kappa.vercel.app/user/admin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(admin),
